@@ -17,7 +17,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative md:mx-20 flex min-h-screen max-w-[1400px] flex-col justify-center px-5 pb-24 pt-45 md:pt-35 md:px-10"
+      className="relative md:mx-20 flex min-h-screen max-w-[1400px] flex-col justify-center px-5 pb-24 pt-40 md:pt-35 md:px-10"
     >
       {/* Heading */}
       <Reveal>
@@ -131,7 +131,7 @@ export function Hero() {
 
           <div className="flex gap-3">
             {[
-              { icon: Mail, label: "Email", href: "mailto:karansingh.builds.com" },
+              { icon: Mail, label: "Email", href: "mailto:karansingh.builds@gmail.com?subject=New%20Project%20Inquiry&body=Hi%20Karan,%0A%0AI've%20been%20through%20your%20portfolio%20and%20think%20you'd%20be%20a%20great%20fit.%0A%0AHere's%20a%20little%20about%20the%20project:%0A%0A•%20Project:%0A•%20Timeline:%0A•%20Budget:%0A%0ALooking%20forward%20to%20connecting!"},
               { icon: GithubIcon, label: "GitHub", href: "https://github.com/mrkarannn03/" },
               { icon: LinkedinIcon, label: "LinkedIn", href: "https://www.linkedin.com/in/karansingh2006/" },
               { icon: LeetcodeIcon, label: "Leetcode", href: "https://leetcode.com/u/karannn021/" },

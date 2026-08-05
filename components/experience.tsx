@@ -172,7 +172,7 @@ export function Experience() {
   }
 
   return (
-    <section ref={sectionRef} id="experience" className="mx-auto max-w-[1400px] px-5 pt-32 md:px-10">
+    <section ref={sectionRef} id="experience" className="mx-auto max-w-[1400px] px-5 pt-42 md:px-10">
       <div className="grid gap-12 md:grid-cols-[minmax(0,380px)_1fr] md:gap-16">
         <div className="md:sticky md:top-28 md:self-start">
           <Reveal>

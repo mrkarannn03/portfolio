@@ -78,7 +78,7 @@ function Entry({ title, meta, body, link }: { title: string; meta: string; body:
 
 export function Achievements() {
   return (
-    <section className="mx-auto max-w-[1400px] px-5 pt-32 md:px-10">
+    <section className="mx-auto max-w-[1400px] px-5 pt-42 md:px-10">
       <Reveal>
         <h2 className="font-anton text-5xl uppercase leading-none text-foreground md:text-8xl">
           Proof under pressure.

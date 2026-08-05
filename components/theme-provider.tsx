@@ -17,7 +17,7 @@ export function useTheme() {
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [dark, setDark] = useState(false)
+  const [dark, setDark] = useState(true)
 
   // Sync initial state from the class set by the anti-flash script.
   useEffect(() => {

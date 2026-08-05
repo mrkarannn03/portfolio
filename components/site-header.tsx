@@ -55,27 +55,92 @@ export function SiteHeader() {
           </Link>
 
           <nav className="flex items-center gap-6 text-sm md:gap-8">
-            {/* <span className="hidden text-muted-foreground sm:inline">v1</span> */}
+  <button
+    type="button"
+    onClick={toggle}
+    aria-label="Toggle color theme"
+    className="
+      group
+      relative
+      flex
+      items-center
+      gap-2
+      overflow-hidden
+      rounded-full
+      border
 
-            <button
-              type="button"
-              onClick={toggle}
-              className="flex items-center gap-2 text-foreground transition-opacity hover:opacity-60"
-              aria-label="Toggle color theme"
-            >
-              {dark ? <Moon className="size-4" /> : <Sun className="size-4" />}
-              <span>{dark ? "Dark" : "Light"}</span>
-            </button>
+      border-black/10
+      dark:border-white/10
 
-            <button
-              type="button"
-              onClick={() => setOpen(true)}
-              className="flex items-center gap-2 text-foreground transition-opacity hover:opacity-60"
-            >
-              <span className="hidden sm:inline">Menu</span>
-              <Menu className="size-5" aria-label="Open navigation" />
-            </button>
-          </nav>
+      bg-white/70
+      dark:bg-white/[0.06]
+
+      px-4
+      py-2
+      text-sm
+
+      text-black
+      dark:text-white
+
+      backdrop-blur-xl
+
+      shadow-[0_8px_30px_rgba(0,0,0,0.06)]
+      dark:shadow-[0_8px_30px_rgba(255,255,255,0.05)]
+
+      transition-all
+      duration-300
+
+      hover:-translate-y-[1px]
+      hover:scale-[1.02]
+
+      hover:bg-white/90
+      dark:hover:bg-white/[0.1]
+
+      hover:border-black/20
+      dark:hover:border-white/20
+
+      active:scale-95
+    "
+  >
+    <span
+      className="
+        absolute
+        inset-0
+        rounded-full
+        bg-gradient-to-b
+        from-white/40
+        to-transparent
+        dark:from-white/10
+        pointer-events-none
+      "
+    />
+
+    <span className="relative transition-transform duration-300 group-hover:rotate-12">
+      {dark ? <Moon className="size-4" /> : <Sun className="size-4" />}
+    </span>
+
+    <span className="relative font-medium">
+      {dark ? "Dark" : "Light"}
+    </span>
+  </button>
+
+  <button
+    type="button"
+    onClick={() => setOpen(true)}
+    className="
+      flex
+      items-center
+      gap-2
+      text-foreground
+      transition-all
+      duration-300
+      hover:opacity-60
+    "
+  >
+    <span className="hidden sm:inline">Menu</span>
+    <Menu className="size-5" aria-label="Open navigation" />
+  </button>
+</nav>
         </div>
       </header>
 

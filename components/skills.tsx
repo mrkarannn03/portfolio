@@ -48,7 +48,7 @@ const SOFT = [
 
 export function Skills() {
   return (
-    <section id="skills" className="mx-auto max-w-[1400px] px-5 pt-32 md:px-10">
+    <section id="skills" className="mx-auto max-w-[1400px] px-5 pt-42 md:px-10">
       <Reveal>
         <h2 className="font-display text-4xl font-bold uppercase leading-tight text-foreground md:text-7xl">
           Things I can break, fix, ship &amp; explain

@@ -47,7 +47,7 @@ const PROJECTS = [
 
 export function CaseStudies() {
   return (
-    <section id="work" className="mx-auto max-w-[1400px] px-5 pt-32 md:px-10">
+    <section id="work" className="mx-auto max-w-[1400px] px-5 pt-42 md:px-10">
       <Reveal>
         <p className="font-script text-3xl text-muted-foreground md:text-4xl">
           Featured Case Studies

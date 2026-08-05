@@ -55,16 +55,29 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`light ${inter.variable} ${oswald.variable} ${anton.variable} ${caveat.variable} bg-background`}
+      className={`dark ${inter.variable} ${oswald.variable} ${anton.variable} ${caveat.variable} bg-background`}
       suppressHydrationWarning
     >
       <head>
         <script
-          // Apply the saved theme before paint to avoid a flash of the wrong theme.
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('theme');var d=t==='dark';var r=document.documentElement;r.classList.toggle('dark',d);r.classList.toggle('light',!d);}catch(e){}})();`,
-          }}
-        />
+  dangerouslySetInnerHTML={{
+    __html: `
+      (function () {
+        try {
+          var theme = localStorage.getItem("theme");
+          var dark = theme === null ? true : theme === "dark";
+
+          var root = document.documentElement;
+          root.classList.toggle("dark", dark);
+          root.classList.toggle("light", !dark);
+        } catch (e) {
+          document.documentElement.classList.add("dark");
+          document.documentElement.classList.remove("light");
+        }
+      })();
+    `,
+  }}
+/>
       </head>
       <body
         className={`${manufacturingConsent.variable} antialiased font-sans`}
